@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "## Your Task",
   "main": "server.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
@@ -21,6 +21,8 @@
   "homepage": "https://github.com/jcxxz/blog_mvc#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "express-handlebars": "^7.0.2"
+    "express-handlebars": "^7.0.2",
+    "express-session": "^1.17.3",
+    "sequelize": "^6.29.3"
   }
 }
