@@ -3,6 +3,7 @@
 ## Your Task
 
 -the task for the module 14 MVC homework was to create a cms style blog page. I was able to write alot of the backend of this project but I then realizeed I neglected to work on my skills with the front end parts of this project and I was unable to finish the project as a whole. 
+- I did my best to add in some handlebars, but I couldn't get past any of these errors that were rendering from the code in my server and I did my best to troubleshoot, but I kept running into a wall 
 
 ## User Story
 
