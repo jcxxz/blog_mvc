@@ -1,0 +1,22 @@
+<h1>Dashboard</h1>
+
+{{#if posts.length}}
+    <ul>
+        {{#each posts}}
+            <li>
+                <h2><a href="/posts/{{_id}}">{{title}}</a></h2>
+                <p>{{body}}</p>
+                <p>By: {{author}}</p>
+            </li>
+        {{/each}}
+    </ul>
+{{else}}
+    <p>No posts yet.</p>
+{{/if}}
+
+{{#if loggedin}}
+    <a href="/posts/new">New Post</a>
+{{else}}
+    <p>Please <a href="/login">login</a> to create a post.</p>
+{{/if}}
+```
