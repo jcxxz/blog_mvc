@@ -15,16 +15,14 @@ const handlebars = exphbs.create({
         format_date: date => {
             return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
         }
-    }
+    },
+    partialsDir: path.join(__dirname, 'views/partials'),   
 });
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
-
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "public")));
+console.log(sequelize);
 
 const sess = {
     secret: "super secret secret",
@@ -38,6 +36,11 @@ const sess = {
 
 app.use(session(sess));
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
+
+
 const hbs = exphbs.create({
     helpers: {
         format_date: date => {
@@ -49,7 +52,7 @@ const hbs = exphbs.create({
 
 app.get('/', (req, res) => {
     res.sequelize
-    res.render('home', {main: '<em>The Tech Blog</em>'});
+    res.render('login', {main: '<em>The Tech Blog</em>'});
 });
 
 app.listen(3001);
